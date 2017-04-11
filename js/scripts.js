@@ -115,7 +115,7 @@ function checkRoundWinner(playerPick, computerPick) {
         computerResultElem.innerHTML = 'Remis';
     }
     setGamePoints(); 
-    endGame();
+    setTimeout(endGame, 100);
 }
 
 function setGamePoints() {
