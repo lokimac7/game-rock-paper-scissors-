@@ -1,0 +1,64 @@
+
+body {
+	background: url('http://www.ckm.pl/files/2014_05/papiernozycekamien-a80f3ba5af382cbaf785ab81d642d0f2_70e614.jpg');
+	background-size: cover;
+
+}
+
+.content {
+	height: 100vh;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.type {
+	color: lightgray;
+	font-size: 32px;
+	font-weight: bold;
+	text-align: center;
+	margin: 30px;
+}
+
+#js-playerPickElement,
+#js-resultsTableElement {
+	display: none;
+} 
+
+h1 {
+	line-height: 100px;
+	color: lightgray;
+	font-weight: bold;
+}
+
+#js-playerPick_rock,
+#js-playerPick_paper,
+#js-playerPick_scissors {
+	font-size: 28px;
+	margin: 35px;
+}
+
+.badge {
+	font-size: 28px;
+	line-height: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#js-playerName,
+#js-computerName,
+#js-playerPick,
+#js-computerPick {
+	color: lightgray;
+	font-size: 32px;
+	margin-left: 20px;
+	line-height: 80px;
+	vertical-align: middle;
+}
+
+#js-playerResult,
+#js-computerResult {
+	color: red;
+	font-size: 32px;
+	margin-left: 20px;
+	line-height: 80px;
+}
