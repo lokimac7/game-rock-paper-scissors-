@@ -127,12 +127,12 @@ function checkRoundWinner(playerPick, computerPick) {
         winner = 'Remis';
       }
 
-      tableBody.append('<tr> \
+      tableBody.innerHTML += '<tr> \
         <td>' + playerPick + '</td> \
         <td>' + computerPick + '</td> \
         <td>' + winner + '</td> \
         <td>' + player.score + ' : ' + computer.score + '</td> \
-      </tr>');
+      </tr>';
   
 
 }
