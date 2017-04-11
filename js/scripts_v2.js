@@ -115,8 +115,30 @@ function checkRoundWinner(playerPick, computerPick) {
         computerResultElem.innerHTML = 'Remis';
     }
 
+    function updateTable() {
+      var tableBody = document.getElementById('js-scoreTable'),
+          winner;
+      
+      if(winnerIs === 'player') {
+        winner = player.name;
+      } else if (winnerIs === 'computer') {
+        winner = computer.name;
+      } else {
+        winner = 'Remis';
+      }
+
+      tableBody.append('<tr> \
+        <td>' + playerPick + '</td> \
+        <td>' + computerPick + '</td> \
+        <td>' + winner + '</td> \
+        <td>' + player.score + ' : ' + computer.score + '</td> \
+      </tr>');
+  
+
+}
 
     setGamePoints(); 
+    updateTable();
     setTimeout(endGame, 100);
 }
 

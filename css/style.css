@@ -62,3 +62,11 @@ h1 {
 	margin-left: 20px;
 	line-height: 80px;
 }
+
+.score {
+	width: 60%;
+	margin: 50px auto;
+	color: lightgray;
+}
+
+.table 
