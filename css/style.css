@@ -1,72 +1,91 @@
-
 body {
-	background: url('http://www.ckm.pl/files/2014_05/papiernozycekamien-a80f3ba5af382cbaf785ab81d642d0f2_70e614.jpg');
-	background-size: cover;
-
+	background: url(images/papiernozycekamien.jpg);
+	background-size: 100%;
+	background-repeat: repeat;
+	text-align: center;
+	color: white;
 }
 
 .content {
-	height: 100vh;
+	min-height: 100vh;
 	width: 100%;
 	background: rgba(0, 0, 0, 0.7);
 }
 
 .type {
-	color: lightgray;
+
 	font-size: 32px;
 	font-weight: bold;
 	text-align: center;
-	margin: 30px;
+	margin: 15px;
 }
 
 #js-playerPickElement,
-#js-resultsTableElement {
+#js-resultsTableElement,
+#js-score {
 	display: none;
 } 
 
 h1 {
 	line-height: 100px;
-	color: lightgray;
+
 	font-weight: bold;
 }
 
 #js-playerPick_rock,
 #js-playerPick_paper,
 #js-playerPick_scissors {
-	font-size: 28px;
-	margin: 35px;
+	font-size: 22px;
+	margin: 15px;
 }
 
 .badge {
-	font-size: 28px;
-	line-height: 40px;
-	padding-left: 20px;
-	padding-right: 20px;
+	font-size: 22px;
+	line-height: 28px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 #js-playerName,
 #js-computerName,
 #js-playerPick,
 #js-computerPick {
-	color: lightgray;
-	font-size: 32px;
+
+	font-size: 22px;
 	margin-left: 20px;
-	line-height: 80px;
+	line-height: 40px;
 	vertical-align: middle;
 }
 
 #js-playerResult,
 #js-computerResult {
 	color: red;
-	font-size: 32px;
+	font-size: 22px;
 	margin-left: 20px;
+	line-height: 40px;
+}
+
+.vs {
+	font-size: 22px;
+	line-height: 40px;
+}
+
+#js-score {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.table {
+	margin: 0;
+}
+
+th {
+	text-align: center;
+}
+
+#js-tableTitle {
+	font-size: 24px;
 	line-height: 80px;
 }
 
-.score {
-	width: 60%;
-	margin: 50px auto;
-	color: lightgray;
-}
 
-.table 

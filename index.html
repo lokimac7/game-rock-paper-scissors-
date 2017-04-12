@@ -2,7 +2,7 @@
 <html lang ="pl">
   <head>
     <meta charset="utf-8">
-    <title> Gra </title>
+    <title> Gra "Kamień - Nożyce - Papier"</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
@@ -57,7 +57,7 @@
 	          Imię gracza
 	          </span>
 	        </div>
-	        <div class="col-xs-2 text-center">
+	        <div class="col-xs-2 text-center vs">
 	          VS.
 	        </div>
 	        <div class="col-xs-5 text-center">
@@ -96,7 +96,24 @@
 	          </div>
 	        </div>
 	      </div>
+		<div id="js-score">
+			<span id="js-tableTitle">WYNIKI POSZCZEGÓLNYCH RUND:</span>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>RUNDA</th>
+						<th>WYBÓR GRACZA</th>
+						<th>WYBÓR KOMPUTERA</th>
+						<th>WYGRANA</th>
+						<th>WYNIK</th>
+					</tr>
+				</thead>
+				<tbody id='js-scoreTable'>
+
+				</tbody>
+			</table>
+		</div>  
 	</div>
-    <script type="text/javascript" src="js/scripts_v2.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
   </body>
 </html>

@@ -27,7 +27,10 @@ var gameState = 'notStarted',  //started // ended
 var newGameElem = document.getElementById('js-newGameElement'),
     pickElem = document.getElementById('js-playerPickElement'),
     resultsElem = document.getElementById('js-resultsTableElement'),
-    helloElement = document.getElementById('js-helloElement');
+    helloElement = document.getElementById('js-helloElement'),
+    tableBody = document.getElementById('js-scoreTable'),
+    tableTitle = document.getElementById('js-tableTitle'),
+    score = document.getElementById('js-score');
 
 var playerPointsElem = document.getElementById('js-playerPoints'),
     playerNameElem = document.getElementById('js-playerName'),
@@ -45,6 +48,7 @@ function setGameElements() {
             helloElement.style.display = 'none';
             pickElem.style.display = 'block';
             resultsElem.style.display = 'block';
+            score.style.display = 'block';
         break;
         case 'ended':
             newGameBtn.innerText = 'Jeszcze raz';
@@ -52,13 +56,15 @@ function setGameElements() {
             computerPickElem.innerText = "Wybór komputera";
             playerResultElem.innerText = "Wynik gracza";
             computerResultElem.innerText = "Wynik komputera";
+            tableTitle.innerText = 'WYNIKI POSZCZEGÓLNYCH RUND ZAKOŃCZONEJ GRY:';
         case 'notStarted':
         default:
             newGameElem.style.display = 'block';
             helloElement.style.display = 'block';
             pickElem.style.display = 'none';
             resultsElem.style.display = 'none';
-  }
+            score.style.display = 'block';
+	}
 }
 
 function newGame() {
@@ -70,8 +76,8 @@ function newGame() {
 
         playerNameElem.innerHTML = player.name;
         setGamePoints(); 
-  }
-
+        tableClear();
+	}
 }
 
 function getComputerPick() {
@@ -115,8 +121,29 @@ function checkRoundWinner(playerPick, computerPick) {
         computerResultElem.innerHTML = 'Remis';
     }
 
+    function updateTable() {
+      var trNumber = document.getElementsByTagName('tr'),
+      winner;
+      
+      if(winnerIs === 'player') {
+        winner = player.name;
+      } else if (winnerIs === 'computer') {
+        winner = computer.name;
+      } else {
+        winner = 'Remis';
+      }
+
+      tableBody.innerHTML += '<tr> \
+        <td>' + trNumber.length + '</td> \
+        <td>' + playerPick + '</td> \
+        <td>' + computerPick + '</td> \
+        <td>' + winner + '</td> \
+        <td>' + player.score + ' : ' + computer.score + '</td> \
+      </tr>';
+	}
 
     setGamePoints(); 
+    updateTable();
     setTimeout(endGame, 100);
 }
 
@@ -136,6 +163,10 @@ function endGame() {
         setGameElements();
     } 
 } 
+
+function tableClear() {
+	tableBody.innerHTML = '';
+}
 
 
     
